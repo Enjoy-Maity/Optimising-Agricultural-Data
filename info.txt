@@ -1,0 +1,52 @@
+Q. What is a dataframe?
+Ans.  Dataframe is basically a data structure with coloumns of different datatypes.
+
+Q. What is shape of a dataset?
+Ans. The shape of a dataset is an attribute or a property of a dataset that tells the no. of rows and coloumns present in the dataset.
+ 
+Q. What is the head function ?
+Ans. Its a function that returns first n rows.
+
+Q. How do we detect missing values in our dataset ?
+Ans. In Python, There is a function named *isnull()* in pandas module that tells us if there are any missing values or null values
+    The function can be used as the following :-
+    1. pandas.isnull(<dataframe>)
+    2. <dataframe>.isnull()
+
+    To get the exact number of missing values per coloumn we can use the following:-
+    1. pandas.isnull(<dataframe>).sum()
+    2. <dataframe>.isnull().sum()
+        The sum functions gives the count of missing values per coloumn.
+
+Q.   What to do with missing values?
+Ans. To fill the missing values, We can use Fill-NA function to replace the missing valueswith statistical values such as Mean, Median, or Mode.
+     NA means not available
+     Pandas has functions like drop-NA, fill-NA, to treat missing values
+
+Q. How to choose between mean, median and mode to fill the missing values?
+Ans. 1. Mean values are used to fill the missing values for general purposes like having numerical values in the coloumns. 
+     2. Mode  values are generally used to fill the categorical missing values.
+     3. Median values are used to fill the missing values when there are many outliers in our dataset.
+
+Q. What is the use of value_counts() ?
+Ans. value_counts() is a function that tells us the no. of occurrences of each unique values in dataset.
+     Its mostly used in our project to check on labels like the following:-
+     <dataframe>['label'].value_counts()
+
+Q. What does mean function do in our project?
+Ans. mean() function is used to find the average of a label i.e. coloumn of our dataset.
+     example :- <dataframe>['<label_name_or_coloumn_in_this_case>'].mean() 
+
+Q. What is distribution in statistics ?
+Ans. Distribution is a concept of statistics that tells us the associated occurrences of all the possible values of our coloumns.
+Checking the distribution helps us to find out all the lying patterns in our coloumns/fields and anomalies and outliers in that particular field.
+
+Q. What is the function in our project to get the distribution plot in our project?
+Ans.  displot() is the function that we are using to plot the distribution in our project. This function is a part of Seaborn module, which is a visuzlization library. TO use this particular function we have to use:
+ seaborn.distplot(<dataframe>)
+
+Q. What is clustering?
+Ans. Clustering is the task of dividing the population or data points into a number of groups such that data points in the same groups are more similar to other data points in the same group than those in other groups. In simple words, the aim is to segregate groups with similar traits and assign them into clusters.
+
+Q. What is Elbow method?
+Ans. In cluster analysis, the elbow method is a heuristic used in determining the number of clusters in a data set. The method consists of plotting the explained variation as a function of the number of clusters, and picking the elbow of the curve as the number of clusters to use. The same method can be used to choose the number of parameters in other data-driven models, such as the number of principal components to describe a data set. 
